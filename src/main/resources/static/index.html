@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aufgabenverwaltung</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Aufgabenverwaltung</h1>
+  <form id="task-form">
+    <h2>Neue Aufgabe erstellen</h2>
+    <label for="title">Titel:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description">Beschreibung:</label>
+    <textarea id="description" name="description"></textarea>
+
+    <label for="person">Person:</label>
+    <textarea id="person" name="person"></textarea>
+
+    <label for="isDone">Status:</label>
+    <select id="isDone" name="isDone" required>
+      <option value="Offen">Offen</option>
+      <option value="Erledigt">Erledigt</option>
+    </select>
+
+    <label for="dueDate">Fälligkeitsdatum:</label>
+    <input type="datetime-local" id="dueDate" name="dueDate">
+
+    <button type="submit">Hinzufügen</button>
+  </form>
+
+  <h2>Aufgaben</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titel</th>
+      <th>Beschreibung</th>
+      <th>zuständige Person</th>
+      <th>Status</th>
+      <th>Fälligkeitsdatum</th>
+      <th>Aktionen</th>
+    </tr>
+    </thead>
+    <tbody id="tasks-table-body">
+    <!-- Aufgaben werden hier dynamisch geladen -->
+    </tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
